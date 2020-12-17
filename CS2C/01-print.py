@@ -14,3 +14,29 @@ print("Sum of {2} and {1} is {0}".format(c,b,a))
 
 #f-strings (fast-strings)
 print(f"Sum of {a} and {b} is {c}")
+
+d = a - b
+e = a / b
+f = a * b
+
+# Multi-line Print
+print(f"""
+1. Add is {c}
+2. Sub is {d}
+3. Div is {e}
+4. Mul is {f}
+""")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
