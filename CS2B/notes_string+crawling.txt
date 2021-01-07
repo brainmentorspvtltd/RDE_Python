@@ -1,0 +1,14 @@
+Data Collection
+- Strings - immutable (which cannot be modified)
+- List
+- Tuples
+- Dictionary
+- Set
+
+=======================
+bs4 - Beautiful Soup 4 - name of package used to scrap data from web pages
+pip install bs4 - cmd/terminal
+Scraping 
+Crawling
+=======================
+3rd party packages 
