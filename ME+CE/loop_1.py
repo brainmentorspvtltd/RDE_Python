@@ -6,6 +6,7 @@ stop = x - 1 = 9
 step = +1
 '''
 for var in range(x):
+    # indentation - by default 4 spaces
     print(var, end=' ')
 print("Loop Exit...")
 
