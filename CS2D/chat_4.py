@@ -4,20 +4,27 @@ import os, random
 name = input("Enter your name : ")
 print("Welcome {}, Ask me anything...".format(name))
 
+helloIntent = ["hello","hi","hey","hi there","hello there","howdy"]
+dateIntent = ["date", "date please", "please tell me date",
+              "today's data", "what' the date today"]
+timeIntent = ["time", "time please", "please tell me time",
+              "current time", "what' the time"]
+musicIntent = ["play song", "play music", "start song"]
+
 chat = True
 while chat:
     msg = input(">> ")
-    #Comparison Operator - ==, !=, >,<, >=, <=
-    #Logical Operators - and, or, not
-    if msg == "hello" or msg == "hi" or msg == "hey":
+    # membership operator - in, not in
+    # identity operator  - is, is not
+    if msg in helloIntent:
         print("{} {}".format(msg,name))
-    elif msg == 'date':
+    elif msg in dateIntent:
         current_date = dt.now().date()
         print(current_date.strftime('%d/%m/%y, %a'))
-    elif msg == 'time':
+    elif msg in timeIntent:
         current_time = dt.now().time()
         print(current_time.strftime('%H:%M:%S, %p'))
-    elif msg == 'play music':
+    elif msg in musicIntent:
         path = r'C:\Users\acer\Music'
         os.chdir(path)
         songs = os.listdir()
