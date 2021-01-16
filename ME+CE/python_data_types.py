@@ -1,0 +1,17 @@
+Data Collection
+- Strings
+  - collection of text, words, para,letters...
+  - represented by single quote or double quote or triple quote
+  - strings are immutable
+- List
+  - collection of any type of data
+  - represented by [...]
+- Tuples
+  - similar to list, but immutable (which cannot be modified)
+  - represented by (...)
+- Dictionary
+  - Collection of data in key value pair
+  - represented by {key : value}
+- Set
+  - Collection of unique and unordered data
+  - represented by {....}
