@@ -18,13 +18,31 @@ for i in range(len(data)):
     if query in data[i]['name'].lower() or query in data[i]['brand'].lower():
         print(data[i])
 '''
+
+search_results = []
 for i in range(len(data)):
     condition_1 = query in data[i]['name'].lower()
     condition_2 = query in data[i]['brand'].lower()
     if  condition_1 or condition_2 :
         print(data[i])
+        search_results.append(data[i])
 
+print("""
+Sort results based on Price :
+1. Low to High
+2. High to Low
+""")
+choice = input("Enter your choice : ")
+if choice == "1":
+    sorted_result = sorted(search_results,
+                           key = lambda x : x['price'])
+else:
+    sorted_result = sorted(search_results,
+                           key = lambda x : x['price'],
+                           reverse=True)
 
+for i in range(len(sorted_result)):
+    print(sorted_result[i])
 
 
 
