@@ -10,3 +10,6 @@ title = page.find('div', class_='title_wrapper')
 title = title.text
 title = title.split()
 print(' '.join(title))
+
+rating = page.find('div', class_='ratingValue')
+print("Rating :",rating.text)

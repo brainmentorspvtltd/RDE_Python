@@ -1,0 +1,26 @@
+List
+- collection of any type of data
+- represented by [...]
+Tuples
+- similar to list, but immutable
+- represented by (...)
+Dictionary
+- collection of data in key value pair
+- represented by {key : value}
+Set
+- collection of unique and unordered data
+- represented by {...}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
