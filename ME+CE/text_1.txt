@@ -1,0 +1,28 @@
+Parameters/Arguments in Python
+- Positional Arguments
+- Keyword Arguments
+- Default Arguments
+- Variable Length Arguments / *args
+- Keyword variable length arguments / **kwargs
+
+text
+binary
+
+modes
+r - read
+w - write
+a - append
+x - 
+
+rb
+wb
+ab
+xb
+
+
+
+
+
+
+
+
