@@ -1,0 +1,64 @@
+Unit - 4
+File Handling
+Exception Handling
+Modules
+Object Oriented Programming
+===================================
+File Handling
+2 types of files in system...
+- text
+- binary (images, audio, video...)
+
+1. Open File
+2. Read/Write
+3. File Close
+
+Syntax for file handling :
+file = open('file_path', 'mode', by_default mode = 'r')
+data = file.read()
+print(data)
+file.close()
+
+Modes for file handling
+by default for handling text files
+- r - open file in read mode
+- w - open file in write mode, overwrite the file if exist, else it 
+will create a new file
+- a - open file in write mode, it appends the data in file 
+- x - open file in write mode, it will always create a new file,
+if file already exist then it will raise error
+====================================
+if we want to read/write a binary file
+- rb
+- wb
+- ab
+- xb
+====================================
+
+Exception Handling
+- try   = this block contains the business logic part
+- except = this block handles the error/exception raised in try block
+- finally = this block will always execute
+- else   = if try block get executed successfully then else block will 
+           execute
+
+========================================
+Modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
