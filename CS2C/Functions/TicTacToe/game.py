@@ -17,14 +17,29 @@ def display_gameboard():
                positions[3], positions[4], positions[5],
                positions[6], positions[7], positions[8]))
 
-def check_winner():
-    pass
+def check_winner(pos, ch):
+    for i in range(len(winning_combinations)):
+        if pos in winning_combinations[i]:
+            index = winning_combinations[i].index(pos)
+            winning_combinations[i][index] = ch
+
+    for i in range(len(winning_combinations)):
+        condition_1 = winning_combinations[i][0] == ch
+        condition_2 = winning_combinations[i][1] == ch
+        condition_3 = winning_combinations[i][2] == ch
+        if condition_1 and condition_2 and condition_3:
+            # print("{} Win".format(ch))
+            return "win"
+
+    print(winning_combinations)
 
 def user_move(ch):
     pos = int(input("Enter your position : "))
     positions[pos - 1] = ch
     display_gameboard()
     occupied.append(pos)
+    msg = check_winner(pos, ch)
+    return msg
 
 def cpu_move(ch):
     pos = random.randint(1,9)
@@ -35,6 +50,7 @@ def cpu_move(ch):
         positions[pos - 1] = ch
         display_gameboard()
         occupied.append(pos)
+        check_winner(pos, ch)
 
 def game():
     display_gameboard()
@@ -44,8 +60,15 @@ def game():
     else:
         cpu_ch = 'X'
     while True:
-        user_move(user_ch)
-        cpu_move(cpu_ch)
+        msg = user_move(user_ch)
+        if msg == "win":
+            print("User win")
+            break
+
+        msg = cpu_move(cpu_ch)
+        if msg == "win":
+            print("CPU Win")
+            break
 
 game()
 
